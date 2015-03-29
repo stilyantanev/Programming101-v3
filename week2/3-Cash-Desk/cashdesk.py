@@ -4,7 +4,6 @@ class Bill:
         self.amount = amount
 
     def __str__(self):
-        # return str(self.amount)
         return "A {}$ bill".format(self.amount)
 
     def __repr__(self):
@@ -83,6 +82,7 @@ class CashDesk():
 
     def total(self):
         result = 0
+
         for bill in self.all_bills:
             if isinstance(bill, Bill):
                 result += int(bill)
