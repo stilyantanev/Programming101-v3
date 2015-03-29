@@ -1,2 +1,2 @@
 # Programming101-v3
-Python course into HackBulgaria
+Here are my solutions of the different tasks from Python course into HackBulgaria.
