@@ -1,6 +1,7 @@
 def to_digits(n):
     digit_list = []
     remainder = 0
+    n = abs(n)
 
     while n > 0:
         remainder = n % 10
@@ -9,6 +10,6 @@ def to_digits(n):
 
     return digit_list
 
-print(to_digits(123))
-print(to_digits(99999))
-print(to_digits(123023))
+# print(to_digits(123))
+# print(to_digits(99999))
+# print(to_digits(123023))

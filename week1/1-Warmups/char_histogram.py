@@ -9,5 +9,5 @@ def char_histogram(string):
 
     return histogram
 
-print(char_histogram("Python!"))
-print(char_histogram("AAAAaaa!!!"))
+# print(char_histogram("Python!"))
+# print(char_histogram("AAAAaaa!!!"))

@@ -3,7 +3,6 @@ def is_an_bn(word):
         return False
     else:
         is_word = True
-
         for i in range(len(word) // 2):
             if word[i] == "a" and word[len(word) - i - 1] == "b":
                 is_word = True
@@ -13,10 +12,10 @@ def is_an_bn(word):
 
         return is_word
 
-print(is_an_bn(""))
-print(is_an_bn("rado"))
-print(is_an_bn("aaabb"))
-print(is_an_bn("aaabbb"))
-print(is_an_bn("aabbaabb"))
-print(is_an_bn("bbbaaa"))
-print(is_an_bn("aaaaabbbbb"))
+# print(is_an_bn(""))
+# print(is_an_bn("rado"))
+# print(is_an_bn("aaabb"))
+# print(is_an_bn("aaabbb"))
+# print(is_an_bn("aabbaabb"))
+# print(is_an_bn("bbbaaa"))
+# print(is_an_bn("aaaaabbbbb"))

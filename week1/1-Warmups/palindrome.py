@@ -15,11 +15,10 @@ def palindrome(obj):
         else:
             is_palindrome = False
             return is_palindrome
-
         first_index += 1
 
     return is_palindrome
 
-print(palindrome(121))
-print(palindrome("kapak"))
-print(palindrome("baba"))
+# print(palindrome(121))
+# print(palindrome("kapak"))
+# print(palindrome("baba"))

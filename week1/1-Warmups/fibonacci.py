@@ -11,7 +11,6 @@ def fibonacci(n):
         return fibonacci_nums
     else:
         fibonacci_nums += [a, b]
-
         while n - 2 > 0:
             a, b = b, a + b
             fibonacci_nums += [b]
@@ -19,7 +18,7 @@ def fibonacci(n):
 
         return fibonacci_nums
 
-print(fibonacci(1))
-print(fibonacci(2))
-print(fibonacci(3))
-print(fibonacci(10))
+# print(fibonacci(1))
+# print(fibonacci(2))
+# print(fibonacci(3))
+# print(fibonacci(10))

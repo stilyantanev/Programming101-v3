@@ -11,12 +11,11 @@ def is_decreasing(seq):
         elif seq[index] >= seq[index - 1]:
             is_monotonously_decreasing = False
             return is_monotonously_decreasing
-
         index -= 1
 
     return is_monotonously_decreasing
 
-print(is_decreasing([5, 4, 3, 2, 1]))
-print(is_decreasing([1, 2, 3]))
-print(is_decreasing([100, 50, 20]))
-print(is_decreasing([1, 1, 1, 1]))
+# print(is_decreasing([5, 4, 3, 2, 1]))
+# print(is_decreasing([1, 2, 3]))
+# print(is_decreasing([100, 50, 20]))
+# print(is_decreasing([1, 1, 1, 1]))

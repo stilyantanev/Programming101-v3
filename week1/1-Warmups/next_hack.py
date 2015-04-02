@@ -1,8 +1,8 @@
 def next_hack(n):
     is_number_hack = False
+    digits = []
     counter_for_one_bits = 0
     remainder = 0
-    digits = []
 
     while not is_number_hack:
         n = n + 1
@@ -30,7 +30,6 @@ def next_hack(n):
                 else:
                     is_number_hack = False
                     break
-
                 start += 1
 
         counter_for_one_bits = 0
@@ -38,6 +37,6 @@ def next_hack(n):
 
     return n
 
-print(next_hack(0))
-print(next_hack(10))
-print(next_hack(8031))
+# print(next_hack(0))
+# print(next_hack(10))
+# print(next_hack(8031))

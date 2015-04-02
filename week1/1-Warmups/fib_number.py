@@ -3,7 +3,9 @@ def fib_number(n):
     b = 1
     number = ""
 
-    if n == 1:
+    if n == 0:
+        return 1
+    elif n == 1:
         number = str(a)
         return int(number)
     elif n == 2:
@@ -11,7 +13,6 @@ def fib_number(n):
         return int(number)
     else:
         number = str(a) + str(b)
-
         while n - 2 > 0:
             a, b = b, a + b
             number += str(b)
@@ -19,5 +20,5 @@ def fib_number(n):
 
         return int(number)
 
-print(fib_number(3))
-print(fib_number(10))
+# print(fib_number(3))
+# print(fib_number(10))
