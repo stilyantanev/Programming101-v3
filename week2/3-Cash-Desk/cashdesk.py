@@ -39,7 +39,7 @@ class Bill:
 # print(money_holder)  # { "A 10$ bill": 2 }
 
 
-class BatchBill():
+class BatchBill:
 
     def __init__(self, bills):
         self.bills = bills
@@ -72,7 +72,7 @@ class BatchBill():
 # A 100$ bill
 
 
-class CashDesk():
+class CashDesk:
 
     def __init__(self):
         self.all_bills = []

@@ -7,7 +7,6 @@ def main():
         text_file = open(filename, "r")
         text = text_file.read()
         text_file.close()
-
         return text
     else:
         print("You haven't specified filename!")

@@ -10,7 +10,7 @@ class Fraction:
     def __str__(self):
         if self.denominator != 1:
             return "{} / {}".format(self.numerator, self.denominator)
-        elif self.denominator == 1:
+        elif self.denominator == 1 or self.numerator == 0:
             return "{}".format(self.numerator)
 
     def __repr__(self):
@@ -24,7 +24,7 @@ class Fraction:
 
     def __add__(self, other):
         numerator = self.numerator * other.denominator + \
-            self.numerator * other.denominator
+            other.numerator * self.denominator
         denominator = self.denominator * other.denominator
         greatest_common_divisor = gcd(numerator, denominator)
         numerator = numerator // greatest_common_divisor
@@ -34,7 +34,7 @@ class Fraction:
 
     def __sub__(self, other):
         numerator = self.numerator * other.denominator - \
-            self.numerator * other.denominator
+            other.numerator * self.denominator
         denominator = self.denominator * other.denominator
         greatest_common_divisor = gcd(numerator, denominator)
         numerator = numerator // greatest_common_divisor
@@ -55,7 +55,6 @@ class Fraction:
 # b = Fraction(2, 4)
 
 # print(a == b)  # True
-
 # print(a + b)  # 1
 # print(a - b)  # 0
 # print(a * b)  # 1 / 4
