@@ -165,8 +165,8 @@ class PandaSocialNetwork:
     def load_social_network(self, file_name):
         with open(file_name, "r") as file_to_load:
             all_pandas = json.loads(file_to_load.read())
-            all_friends = []
 
+        all_friends = []
         for panda in all_pandas:
             self.pandas[eval(panda)] = []
             for friend_of_panda in all_pandas[panda]:
