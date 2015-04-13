@@ -5,6 +5,7 @@ from music_crawler import MusicCrawler
 class MusicCrawlerTest(unittest.TestCase):
 
     def setUp(self):
+        self.path = ""
         self.test_crawler = MusicCrawler(self.path)
 
     def test_create_new_instance(self):
