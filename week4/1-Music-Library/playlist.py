@@ -28,8 +28,9 @@ class Playlist:
         self.songs.extend(songs)
 
     def total_length(self):
-        total_duration = sum([song.length_of_song(seconds=True)
-                              for song in self.songs])
+        total_duration = 0
+        for song in self.songs:
+            total_duration += song.length_of_song(seconds=True)
 
         hours = total_duration // 3600
         total_duration = total_duration % 3600
