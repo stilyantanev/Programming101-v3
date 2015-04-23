@@ -118,7 +118,6 @@ class PandaSocialNetworkTest(unittest.TestCase):
         self.network.add_panda(other_panda)
         self.assertTrue(self.network.has_panda(panda))
         self.assertTrue(self.network.has_panda(other_panda))
-
         self.network.make_friends(panda, other_panda)
         result = {panda: [other_panda],
                   other_panda: [panda]}
@@ -167,7 +166,6 @@ class PandaSocialNetworkTest(unittest.TestCase):
         self.network.add_panda(another_panda)
         self.assertEqual(
             self.network.how_many_gender_in_network(1, panda, "male"), 2)
-
 
 if __name__ == '__main__':
     unittest.main()

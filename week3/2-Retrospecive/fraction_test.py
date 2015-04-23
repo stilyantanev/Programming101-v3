@@ -40,6 +40,7 @@ class FractionTest(unittest.TestCase):
 
     def test_addition(self):
         self.other_fraction = Fraction(4, 6)
+
         first_numerator = self.fraction.numerator
         first_denominator = self.fraction.denominator
         second_numerator = self.other_fraction.numerator
@@ -65,6 +66,7 @@ class FractionTest(unittest.TestCase):
 
     def test_substraction(self):
         self.other_fraction = Fraction(3, 7)
+
         first_numerator = self.fraction.numerator
         first_denominator = self.fraction.denominator
         second_numerator = self.other_fraction.numerator
@@ -90,6 +92,7 @@ class FractionTest(unittest.TestCase):
 
     def test_multiplication(self):
         self.other_fraction = Fraction(10, 3)
+
         first_numerator = self.fraction.numerator
         first_denominator = self.fraction.denominator
         second_numerator = self.other_fraction.numerator

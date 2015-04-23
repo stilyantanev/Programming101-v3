@@ -1,0 +1,1 @@
+{"Panda('Ivo', 'ivo@pandamail.com', 'male')": ["Panda('Rado', 'rado@pandamail.com', 'male')"], "Panda('Tony', 'tony@pandamail.com', 'female')": ["Panda('Rado', 'rado@pandamail.com', 'male')"], "Panda('Rado', 'rado@pandamail.com', 'male')": ["Panda('Ivo', 'ivo@pandamail.com', 'male')", "Panda('Tony', 'tony@pandamail.com', 'female')"]}

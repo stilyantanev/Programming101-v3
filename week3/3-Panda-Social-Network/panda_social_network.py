@@ -37,6 +37,7 @@ class Panda:
 
     def __repr__(self):
         message = "Panda('{}', '{}', '{}')"
+
         return message.format(self.name, self.email, self.gender)
 
     def __eq__(self, other):
@@ -51,15 +52,6 @@ class Panda:
 
     def is_email_valid(self, email):
         return re.search(r"[^@]+@[^@]+\.[^@]+", email)
-
-
-# ivo = Panda("Ivo", "ivo@pandamail.com", "male")
-
-# print(ivo.get_name() == "Ivo")  # True
-# print(ivo.get_email() == "ivo@pandamail.com")  # True
-# print(ivo.get_gender() == "male")  # True
-# print(ivo.isMale() == True)  # True
-# print(ivo.isFemale() == False)  # True
 
 
 class PandaSocialNetwork:
@@ -118,9 +110,11 @@ class PandaSocialNetwork:
 
         while len(queue) != 0:
             current_node = queue.pop(0)
+
             if current_node == panda2:
                 found = True
                 break
+
             for neighbour in self.pandas[current_node]:
                 if neighbour not in visited:
                     path_to[neighbour] = current_node
@@ -136,17 +130,21 @@ class PandaSocialNetwork:
 
     def are_connected(self, panda1, panda2):
         level_conn = PandaSocialNetwork.connection_level(self, panda1, panda2)
+
         return level_conn > 0
 
     def how_many_gender_in_network(self, level, panda, gender):
         counter = 0
         conn_level = 0
+
         for panda_user in self.pandas:
             conn_level = PandaSocialNetwork.connection_level(
                 self, panda, panda_user)
+
             different_panda = panda_user != panda
             bigger_or_equal_level = conn_level <= level
             same_gender = panda_user.get_gender() == gender
+
             if different_panda and bigger_or_equal_level and same_gender:
                 counter += 1
 
@@ -156,6 +154,7 @@ class PandaSocialNetwork:
         all_pandas = {}
         for panda in self.pandas:
             all_pandas[repr(panda)] = []
+
             for friend_of_panda in self.pandas[panda]:
                 all_pandas[repr(panda)] += [repr(friend_of_panda)]
 
@@ -169,28 +168,9 @@ class PandaSocialNetwork:
         all_friends = []
         for panda in all_pandas:
             self.pandas[eval(panda)] = []
+
             for friend_of_panda in all_pandas[panda]:
                 all_friends += [eval(friend_of_panda)]
+
             self.pandas[eval(panda)] = all_friends
             all_friends = []
-
-
-# network = PandaSocialNetwork()
-# ivo = Panda("Ivo", "ivo@pandamail.com", "male")
-# rado = Panda("Rado", "rado@pandamail.com", "male")
-# tony = Panda("Tony", "tony@pandamail.com", "female")
-
-# for panda in [ivo, rado, tony]:
-#     network.add_panda(panda)
-
-# network.make_friends(ivo, rado)
-# network.make_friends(rado, tony)
-
-# print(network.connection_level(ivo, rado) == 1)  # True
-# print(network.connection_level(ivo, tony) == 2)  # True
-
-# print(network.how_many_gender_in_network(1, rado, "female"))   # True
-
-# network.save_social_network("save_network.txt")
-# network.load_social_network("save_network.txt")
-# network.save_social_network("load_network.txt")
