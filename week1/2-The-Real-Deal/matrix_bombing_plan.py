@@ -3,7 +3,7 @@ from copy import deepcopy
 from pprint import pprint
 
 
-def calc_bombed_matrix(m, i, j):
+def calculate_bombed_matrix(m, i, j):
     indexes = [-1, 0, 1]
     bomb_m = deepcopy(m)
 
@@ -25,10 +25,15 @@ def matrix_bombing_plan(m):
 
     for i in range(len(m)):
         for j in range(len(m[0])):
-            total_sum = sum_matrix(calc_bombed_matrix(m, i, j))
+            total_sum = sum_matrix(calculate_bombed_matrix(m, i, j))
             elements[(i, j)] = total_sum
 
     return elements
 
-# m = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
-# pprint(matrix_bombing_plan(m))
+
+def main():
+    m = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+    pprint(matrix_bombing_plan(m))
+
+if __name__ == '__main__':
+    main()
