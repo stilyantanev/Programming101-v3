@@ -1,7 +1,7 @@
 def to_digits(n):
+    n = abs(n)
     digit_list = []
     remainder = 0
-    n = abs(n)
 
     while n > 0:
         remainder = n % 10
@@ -10,6 +10,11 @@ def to_digits(n):
 
     return digit_list
 
-# print(to_digits(123))
-# print(to_digits(99999))
-# print(to_digits(123023))
+
+def main():
+    print(to_digits(123))
+    print(to_digits(99999))
+    print(to_digits(123023))
+
+if __name__ == '__main__':
+    main()

@@ -19,6 +19,11 @@ def palindrome(obj):
 
     return is_palindrome
 
-# print(palindrome(121))
-# print(palindrome("kapak"))
-# print(palindrome("baba"))
+
+def main():
+    print(palindrome(121))
+    print(palindrome("kapak"))
+    print(palindrome("baba"))
+
+if __name__ == '__main__':
+    main()

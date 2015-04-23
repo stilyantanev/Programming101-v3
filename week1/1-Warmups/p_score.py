@@ -18,6 +18,12 @@ def p_score(n):
     if is_palindrome:
         return 1
 
-# print(p_score(1))
-# print(p_score(48))
-# print(p_score(198))
+
+def main():
+    print(p_score(1))
+    print(p_score(48))
+    print(p_score(198))
+    print(p_score(203))
+
+if __name__ == '__main__':
+    main()

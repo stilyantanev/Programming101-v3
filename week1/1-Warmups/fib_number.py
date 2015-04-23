@@ -17,8 +17,12 @@ def fib_number(n):
             a, b = b, a + b
             number += str(b)
             n -= 1
-
         return int(number)
 
-# print(fib_number(3))
-# print(fib_number(10))
+
+def main():
+    print(fib_number(3))
+    print(fib_number(10))
+
+if __name__ == '__main__':
+    main()

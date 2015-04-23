@@ -1,8 +1,8 @@
 def fact_digits(n):
-    sum_of_fact_digits = 0
-    remainder = 0
-    digits = []
     n = abs(n)
+    digits = []
+    remainder = 0
+    sum_of_fact_digits = 0
 
     while n > 0:
         remainder = n % 10
@@ -18,6 +18,11 @@ def fact_digits(n):
 
     return sum_of_fact_digits
 
-# print(fact_digits(111))
-# print(fact_digits(145))
-# print(fact_digits(999))
+
+def main():
+    print(fact_digits(111))
+    print(fact_digits(145))
+    print(fact_digits(999))
+
+if __name__ == '__main__':
+    main()

@@ -1,8 +1,7 @@
 def next_hack(n):
-    is_number_hack = False
     digits = []
+    is_number_hack = False
     counter_for_one_bits = 0
-    remainder = 0
 
     while not is_number_hack:
         n = n + 1
@@ -37,6 +36,11 @@ def next_hack(n):
 
     return n
 
-# print(next_hack(0))
-# print(next_hack(10))
-# print(next_hack(8031))
+
+def main():
+    print(next_hack(0))
+    print(next_hack(10))
+    print(next_hack(8031))
+
+if __name__ == '__main__':
+    main()

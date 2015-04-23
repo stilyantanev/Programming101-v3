@@ -15,7 +15,12 @@ def is_decreasing(seq):
 
     return is_monotonously_decreasing
 
-# print(is_decreasing([5, 4, 3, 2, 1]))
-# print(is_decreasing([1, 2, 3]))
-# print(is_decreasing([100, 50, 20]))
-# print(is_decreasing([1, 1, 1, 1]))
+
+def main():
+    print(is_decreasing([5, 4, 3, 2, 1]))
+    print(is_decreasing([1, 2, 3]))
+    print(is_decreasing([100, 50, 20]))
+    print(is_decreasing([1, 1, 1, 1]))
+
+if __name__ == '__main__':
+    main()

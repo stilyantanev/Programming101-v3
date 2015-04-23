@@ -15,10 +15,14 @@ def fibonacci(n):
             a, b = b, a + b
             fibonacci_nums += [b]
             n -= 1
-
         return fibonacci_nums
 
-# print(fibonacci(1))
-# print(fibonacci(2))
-# print(fibonacci(3))
-# print(fibonacci(10))
+
+def main():
+    print(fibonacci(1))
+    print(fibonacci(2))
+    print(fibonacci(3))
+    print(fibonacci(10))
+
+if __name__ == '__main__':
+    main()
