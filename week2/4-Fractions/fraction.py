@@ -26,6 +26,7 @@ class Fraction:
         numerator = self.numerator * other.denominator + \
             other.numerator * self.denominator
         denominator = self.denominator * other.denominator
+
         greatest_common_divisor = gcd(numerator, denominator)
         numerator = numerator // greatest_common_divisor
         denominator = denominator // greatest_common_divisor
@@ -36,6 +37,7 @@ class Fraction:
         numerator = self.numerator * other.denominator - \
             other.numerator * self.denominator
         denominator = self.denominator * other.denominator
+
         greatest_common_divisor = gcd(numerator, denominator)
         numerator = numerator // greatest_common_divisor
         denominator = denominator // greatest_common_divisor
@@ -45,16 +47,22 @@ class Fraction:
     def __mul__(self, other):
         numerator = self.numerator * other.numerator
         denominator = self.denominator * other.denominator
+
         greatest_common_divisor = gcd(numerator, denominator)
         numerator = numerator // greatest_common_divisor
         denominator = denominator // greatest_common_divisor
 
         return Fraction(numerator, denominator)
 
-# a = Fraction(1, 2)
-# b = Fraction(2, 4)
 
-# print(a == b)  # True
-# print(a + b)  # 1
-# print(a - b)  # 0
-# print(a * b)  # 1 / 4
+def main():
+    a = Fraction(1, 2)
+    b = Fraction(2, 4)
+
+    print(a == b)  # True
+    print(a + b)  # 1
+    print(a - b)  # 0
+    print(a * b)  # 1 / 4
+
+if __name__ == '__main__':
+    main()
