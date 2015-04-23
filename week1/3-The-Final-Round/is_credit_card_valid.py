@@ -6,9 +6,11 @@ def is_credit_card_valid(number):
 def is_sum_divisible(number):
     digits = to_digits(number)
     index = 0
+
     while index < len(digits):
         if is_odd(index):
             digits[index] = sum(to_digits(digits[index] * 2))
+
         index += 1
 
     return sum(digits) % 10 == 0
@@ -24,5 +26,10 @@ def is_odd(number):
 def to_digits(number):
     return [int(digit) for digit in str(number)]
 
-# print(is_credit_card_valid(79927398713))
-# print(is_credit_card_valid(79927398715))
+
+def main():
+    print(is_credit_card_valid(79927398713))
+    print(is_credit_card_valid(79927398715))
+
+if __name__ == '__main__':
+    main()

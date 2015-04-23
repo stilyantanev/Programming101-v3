@@ -12,8 +12,10 @@ def reduce_file_path(path):
 
     if path.count('/') > 1:
         path = path[::-1]
+
         while path[0] == '/' and path.count('/') > 1:
             path = path[1:]
+
     path = path[::-1]
 
     for i in range(len(path) - 1):
@@ -22,18 +24,25 @@ def reduce_file_path(path):
 
     if is_two_points:
         path = path[::-1]
+
         while path[0] != '/':
             path = path[1:]
+
         path = path[::-1]
 
     return path
 
-# print(reduce_file_path("/"))
-# print(reduce_file_path("/srv/../"))
-# print(reduce_file_path("/srv/www/htdocs/wtf/"))
-# print(reduce_file_path("/srv/www/htdocs/wtf"))
-# print(reduce_file_path("/srv/./././././"))
-# print(reduce_file_path("/etc//wtf/"))
-# print(reduce_file_path("/etc/../etc/../etc/../"))
-# print(reduce_file_path("//////////////"))
-# print(reduce_file_path("/../"))
+
+def main():
+    print(reduce_file_path("/"))
+    print(reduce_file_path("/srv/../"))
+    print(reduce_file_path("/srv/www/htdocs/wtf/"))
+    print(reduce_file_path("/srv/www/htdocs/wtf"))
+    print(reduce_file_path("/srv/./././././"))
+    print(reduce_file_path("/etc//wtf/"))
+    print(reduce_file_path("/etc/../etc/../etc/../"))
+    print(reduce_file_path("//////////////"))
+    print(reduce_file_path("/../"))
+
+if __name__ == '__main__':
+    main()

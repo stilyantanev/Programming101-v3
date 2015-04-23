@@ -10,11 +10,17 @@ def group(things):
             big_group.append(small_group)
             small_group = []
             small_group.append(things[index])
+
         index += 1
+
     big_group.append(small_group)
 
     return big_group
 
-# if __name__ == '__main__':
-#     print(group([1, 1, 1, 2, 3, 1, 1]))
-#     print(group([1, 2, 1, 2, 3, 3]))
+
+def main():
+    print(group([1, 1, 1, 2, 3, 1, 1]))
+    print(group([1, 2, 1, 2, 3, 3]))
+
+if __name__ == '__main__':
+    main()
