@@ -26,7 +26,7 @@ class Crawler:
             try:
                 response = requests.head(
                     link, timeout=3, allow_redirects=True, headers=our_headers)
-                if "server" in response.headers:
+                if "Server" in response.headers:
                     names_of_servers.append(response.headers["Server"])
                     print(response.headers["Server"])
             except requests.exceptions.RequestException:
