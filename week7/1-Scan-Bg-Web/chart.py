@@ -17,9 +17,6 @@ class Chart:
 
         # Make Pie-Chart
         colors = ['darkslateblue', 'gold', 'green', 'lightcoral']
-        explode = (0, 0, 0, 0)
-
-        pyplot.pie(sizes, explode=explode, labels=keys, colors=colors,
-                   shadow=True, startangle=90)
+        pyplot.pie(sizes, labels=keys, colors=colors, startangle=90)
         pyplot.axis('equal')
         pyplot.savefig("pie-chart.png")

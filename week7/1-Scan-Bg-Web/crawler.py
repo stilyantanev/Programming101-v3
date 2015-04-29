@@ -46,6 +46,6 @@ class Crawler:
         with open(filename, "r") as text_file:
             content = text_file.read().split("\n")
 
-        print("Loading completed successfully")
+        print("Loading completed successfully!")
 
         return content
