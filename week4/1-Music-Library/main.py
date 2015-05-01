@@ -22,6 +22,7 @@ def main():
                 print("repeat")
                 print("shuffle")
                 print("show")
+                print("save")
                 print("quit")
             elif command == "add":
                 directory = input("Please enter directory:")
@@ -43,6 +44,8 @@ def main():
                 player.change_shuffle_mode(mode)
             elif command == "show":
                 player.show_playlist()
+            elif command == "save":
+                player.real_playlist.save()
             elif command == "quit":
                 print("Bye!")
                 break

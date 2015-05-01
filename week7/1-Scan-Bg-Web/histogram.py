@@ -8,6 +8,7 @@ class Histogram:
 
         for key, count in self.dictionary.items():
             dictionary_presentation += "{}: {} \n".format(key, count)
+
         dictionary_presentation.strip("\n")
 
         return dictionary_presentation

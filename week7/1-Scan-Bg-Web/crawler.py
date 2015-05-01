@@ -1,16 +1,19 @@
+from histogram import Histogram
 import requests
+import json
 
 
 class Crawler:
 
     @staticmethod
-    def get_valid_links(already_parsed_html, webpage, link):
+    def get_valid_links(already_parsed_html, webpage):
         all_valid_links = []
+        part_of_link = "link.php?id="
 
         for tag in already_parsed_html.find_all('a'):
             if tag.get('href') is not None:
-                if link in tag.get('href'):
-                    all_valid_links.append(webpage + tag.get('href'))
+                if part_of_link in tag.get('href'):
+                    all_valid_links.append(webpage + '/' + tag.get('href'))
 
         return all_valid_links
 
@@ -35,17 +38,31 @@ class Crawler:
         return names_of_servers
 
     @staticmethod
-    def save_server_names_in_file(names, filename):
+    def group_servers_by_name(server_names):
+        frequent_names = ["Apache", "Microsoft-IIS", "nginx", "lighttpd"]
+        grouped_servers = Histogram()
+
+        for server_name in server_names:
+            for frequent_name in frequent_names:
+                if frequent_name in server_name:
+                    grouped_servers.add(frequent_name)
+
+        return grouped_servers
+
+    @staticmethod
+    def save(filename, names):
         with open(filename, "w") as text_file:
-            text_file.write("\n".join(names))
+            text_file.write(json.dumps(names, indent=True))
 
         print("Saving completed successfully!")
 
     @staticmethod
-    def load_server_names_from_file(filename):
+    def load(filename):
         with open(filename, "r") as text_file:
-            content = text_file.read().split("\n")
+            # content = text_file.read().split("\n")
+            content = text_file.read()
+            data = json.loads(content)
 
         print("Loading completed successfully!")
 
-        return content
+        return data

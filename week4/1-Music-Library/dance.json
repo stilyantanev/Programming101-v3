@@ -1,0 +1,33 @@
+{
+ "songs": [
+  {
+   "title": "Toca's Miracle",
+   "artist": "Fragma",
+   "album": "SephirothTrance [Vol 01]",
+   "name": "Fragma - Toca's Miracle.mp3",
+   "length": "0:04:56"
+  },
+  {
+   "title": "Feels So Good",
+   "artist": "Armin van Buuren feat. Nadia Ali",
+   "album": "Mirage",
+   "name": "Armin van Buuren feat. Nadia Ali - Feels So Good.mp3",
+   "length": "0:03:57"
+  },
+  {
+   "title": "In My Mind feat. Georgi Kay (Axwell Mix)",
+   "artist": "Ivan Gough, Feenixpawl",
+   "album": "In My Mind",
+   "name": "Ivan Gough & Feenixpawl Feat. Georgi Kay \u2013 In My Mind (Axwell Mix).mp3",
+   "length": "0:06:40"
+  },
+  {
+   "title": "Talk That Talk",
+   "artist": "Rihanna",
+   "album": "Talk That Talk",
+   "name": "Rihanna - Talk That Talk.mp3",
+   "length": "0:03:29"
+  }
+ ],
+ "name": "dance"
+}

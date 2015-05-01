@@ -19,9 +19,10 @@ class HistogramTest(unittest.TestCase):
         self.assertEqual(self.server_histogram.dictionary["Apache"], 100)
 
     def test_add_non_existing_element(self):
-        for i in range(10):
-            self.server_histogram.add("Apache")
-        self.assertEqual(self.server_histogram.dictionary["Apache"], 10)
+        self.server_histogram.add("Microsoft-IIS")
+        self.server_histogram.add("Microsoft-IIS")
+        self.server_histogram.add("Microsoft-IIS")
+        self.assertEqual(self.server_histogram.dictionary["Microsoft-IIS"], 3)
 
     def test_count_non_existing_element(self):
         self.assertEqual(self.server_histogram.count("nginx"), None)
