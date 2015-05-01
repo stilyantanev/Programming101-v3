@@ -131,7 +131,7 @@ class Playlist:
     def save(self):
         file_name = self.name.replace(" ", "-") + ".json"
         with open(file_name, "w") as f:
-            f.write(dumps(self.prepare_json(), indent=4))
+            f.write(dumps(self.prepare_json(), indent=True))
 
         print("Playlist was saved successfully!")
 
