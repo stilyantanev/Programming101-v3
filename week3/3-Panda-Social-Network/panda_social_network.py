@@ -24,10 +24,10 @@ class Panda:
     def get_gender(self):
         return self.gender
 
-    def isMale(self):
+    def is_male(self):
         return self.gender.lower() == "male"
 
-    def isFemale(self):
+    def is_female(self):
         return self.gender.lower() == "female"
 
     def __str__(self):

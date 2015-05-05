@@ -33,10 +33,10 @@ class PandaTest(unittest.TestCase):
         self.assertEqual(self.panda.get_gender(), "male")
 
     def test_is_male(self):
-        self.assertTrue(self.panda.isMale())
+        self.assertTrue(self.panda.is_male())
 
     def test_is_female(self):
-        self.assertFalse(self.panda.isFemale())
+        self.assertFalse(self.panda.is_female())
 
     def test_str_cast(self):
         panda_gender = self.panda.gender
