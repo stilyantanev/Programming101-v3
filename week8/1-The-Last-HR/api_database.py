@@ -165,8 +165,8 @@ class Database:
     def view_student_and_courses(self):
         view_student_and_courses_query = """
         SELECT students.name, courses.name
-        FROM courses JOIN students ON
-        courses.id IN (
+        FROM courses JOIN students
+        ON courses.id IN (
             SELECT course_id
             FROM students_to_courses
             WHERE student_id = students.id)
