@@ -94,7 +94,7 @@ LIMIT 1;
 SELECT orders.OrderID, employees.FirstName, employees.LastName, customers.CompanyName
 FROM orders
 JOIN employees ON orders.EmployeeID = employees.EmployeeID
-JOIN customers ON orders.CustomerID = customers.CustomerID
+JOIN customers ON orders.CustomerID = customers.CustomerID;
 
 19.
 SELECT customers.CompanyName, shippers.CompanyName
