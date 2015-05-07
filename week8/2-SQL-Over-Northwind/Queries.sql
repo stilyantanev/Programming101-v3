@@ -6,6 +6,7 @@ FROM employees;
 SELECT *
 FROM employees
 WHERE City = "Seattle";
+
 3.
 SELECT *
 FROM employees
@@ -33,7 +34,6 @@ FROM employees
 ORDER BY HireDate
 LIMIT 5;
 
-
 8.
 SELECT *
 FROM employees
@@ -43,7 +43,6 @@ WHERE ReportsTo IS NULL;
 SELECT employees.FirstName, employees.LastName, bosses.FirstName, bosses.LastName
 FROM employees JOIN employees AS bosses
 ON employees.ReportsTo = bosses.EmployeeID;
-
 
 10.
 SELECT COUNT(TitleOfCourtesy)
