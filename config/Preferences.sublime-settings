@@ -6,7 +6,7 @@
     "file_exclude_patterns":
     [
         "*.pyc",
-        ".gitignore"
+        ".gitignore",
         "*.db"
     ],
     "folder_exclude_patterns":
