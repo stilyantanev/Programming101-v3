@@ -31,5 +31,7 @@ class HistogramTest(unittest.TestCase):
         self.server_histogram.dictionary["nginx"] = 200
         self.assertEqual(self.server_histogram.count("nginx"), 200)
 
+
+
 if __name__ == '__main__':
     unittest.main()
