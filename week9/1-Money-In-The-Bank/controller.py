@@ -23,7 +23,6 @@ class Controller:
     def check_password(self, username, password):
         return password_validator(username, password)
 
-    # REGISTER
     def check_username(self, username):
         is_username = self.session.query(
             exists().where(Client.username == username)).scalar()
