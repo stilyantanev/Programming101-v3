@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <table>
+        {% for key, value in projections.items %}
+            <tr>
+                <th>{{key.name}}</th>
+                <td>
+                    <table>
+                        {% for projection in value %}
+                        <tr>
+                            <td>{{projection.movie_format}}</td>
+                            <td>{{projection.date}}</td>
+                             <td>{{projection.time}}</td>
+                        </tr>
+                        {% endfor %}
+                    </table>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
+
+
