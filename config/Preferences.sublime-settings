@@ -1,28 +1,37 @@
 {
-    "detect_indentation": false,
-    "draw_centered": false,
-    "draw_white_space": "all",
-    "ensure_newline_at_eof_on_save": true,
-    "file_exclude_patterns":
-    [
-        "*.pyc",
-        ".gitignore",
-        "*.db"
-    ],
-    "folder_exclude_patterns":
-    [
-        ".git",
-        "__pycache__",
-    ],
-    "font_size": 12,
-    "highlight_line": true,
-    "highlight_modified_tabs": true,
-    "ignored_packages":
-    [
-        "Vintage"
-    ],
-    "tab_size": 4,
-    "translate_tabs_to_spaces": true,
-    "trim_trailing_white_space_on_save": true
+	"color_scheme": "Packages/Theme - Flatland/Flatland Monokai.tmTheme",
+	"detect_indentation": false,
+	"draw_centered": false,
+	"draw_white_space": "all",
+	"ensure_newline_at_eof_on_save": true,
+	"file_exclude_patterns":
+	[
+		".gitignore",
+		".DS_Store",
+		"*.db",
+		"*.pid",
+		"*.pyc"
+	],
+	"find_selected_text": true,
+	"folder_exclude_patterns":
+	[
+		".git",
+		"__pycache__",
+		"env",
+		"env3"
+	],
+	"font_face": "Ubuntu Mono",
+	"font_size": 24,
+	"highlight_line": true,
+	"highlight_modified_tabs": true,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"tab_size": 4,
+	"translate_tabs_to_spaces": true,
+	"trim_trailing_white_space_on_save": true,
+	"wide_caret": true,
+	"word_wrap": true,
+	"wrap_width": 80
 }
-
