@@ -1,3 +1,5 @@
+import unittest
+
 from factorial import factorial
 from fibonacci import fibonacci
 from sum_of_digits import sum_of_digits
@@ -14,13 +16,13 @@ from is_increasing import is_increasing
 from is_decreasing import is_decreasing
 from next_hack import next_hack
 
-import unittest
-
 
 class WarmupsTest(unittest.TestCase):
 
     def test_factorial(self):
         self.assertEqual(factorial(5), 120)
+        self.assertEqual(factorial(4), 24)
+        self.assertEqual(factorial(1), 1)
         self.assertEqual(factorial(0), 1)
 
     def test_fibonacci(self):
