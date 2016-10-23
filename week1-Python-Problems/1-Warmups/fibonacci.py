@@ -1,21 +1,15 @@
 def fibonacci(n):
-    a = 1
-    b = 1
-    fibonacci_nums = []
+    nums = [1]
 
     if n == 1:
-        fibonacci_nums += [a]
-        return fibonacci_nums
-    elif n == 2:
-        fibonacci_nums += [a, b]
-        return fibonacci_nums
+        return nums
     else:
-        fibonacci_nums += [a, b]
+        nums.append(1)
         while n - 2 > 0:
-            a, b = b, a + b
-            fibonacci_nums += [b]
+            nums.append(nums[-1] + nums[-2])
             n -= 1
-        return fibonacci_nums
+
+        return nums
 
 
 def main():
@@ -23,6 +17,7 @@ def main():
     print(fibonacci(2))
     print(fibonacci(3))
     print(fibonacci(10))
+
 
 if __name__ == '__main__':
     main()

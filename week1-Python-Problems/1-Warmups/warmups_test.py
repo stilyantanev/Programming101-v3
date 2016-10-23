@@ -28,6 +28,7 @@ class WarmupsTest(unittest.TestCase):
     def test_fibonacci(self):
         self.assertEqual(fibonacci(1), [1])
         self.assertEqual(fibonacci(2), [1, 1])
+        self.assertEqual(fibonacci(3), [1, 1, 2])
         self.assertEqual(fibonacci(8), [1, 1, 2, 3, 5, 8, 13, 21])
 
     def test_sum_of_digits(self):
@@ -101,6 +102,7 @@ class WarmupsTest(unittest.TestCase):
         self.assertEqual(next_hack(1), 7)
         self.assertEqual(next_hack(0), 1)
         self.assertEqual(next_hack(8032), 8191)
+
 
 if __name__ == '__main__':
     unittest.main()
