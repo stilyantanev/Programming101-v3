@@ -1,4 +1,3 @@
-import unittest
 from factorial import factorial
 from fibonacci import fibonacci
 from sum_of_digits import sum_of_digits
@@ -14,6 +13,8 @@ from p_score import p_score
 from is_increasing import is_increasing
 from is_decreasing import is_decreasing
 from next_hack import next_hack
+
+import unittest
 
 
 class WarmupsTest(unittest.TestCase):
