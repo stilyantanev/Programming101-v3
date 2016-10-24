@@ -1,14 +1,12 @@
 def sum_of_digits(n):
     n = abs(n)
-    digits = []
-    remainder = 0
+    sum_nums = 0
 
     while n > 0:
-        remainder = n % 10
-        digits += [remainder]
+        sum_nums += n % 10
         n = n // 10
 
-    return sum(digits)
+    return sum_nums
 
 
 def main():
@@ -16,6 +14,7 @@ def main():
     print(sum_of_digits(123))
     print(sum_of_digits(6))
     print(sum_of_digits(-10))
+
 
 if __name__ == '__main__':
     main()

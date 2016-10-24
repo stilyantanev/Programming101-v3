@@ -5,7 +5,6 @@ def fibonacci(n):
         return nums
     else:
         nums.append(1)
-        
         while n - 2 > 0:
             nums.append(nums[-1] + nums[-2])
             n -= 1

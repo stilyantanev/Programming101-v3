@@ -20,33 +20,40 @@ from next_hack import next_hack
 class WarmupsTest(unittest.TestCase):
 
     def test_factorial(self):
-        self.assertEqual(factorial(5), 120)
-        self.assertEqual(factorial(4), 24)
-        self.assertEqual(factorial(1), 1)
         self.assertEqual(factorial(0), 1)
+        self.assertEqual(factorial(1), 1)
+        self.assertEqual(factorial(4), 24)
+        self.assertEqual(factorial(5), 120)
 
     def test_fibonacci(self):
         self.assertEqual(fibonacci(1), [1])
         self.assertEqual(fibonacci(2), [1, 1])
         self.assertEqual(fibonacci(3), [1, 1, 2])
         self.assertEqual(fibonacci(8), [1, 1, 2, 3, 5, 8, 13, 21])
+        self.assertEqual(fibonacci(10), [1, 1, 2, 3, 5, 8, 13, 21, 34, 55])
 
     def test_sum_of_digits(self):
-        self.assertEqual(sum_of_digits(11), 2)
-        self.assertEqual(sum_of_digits(1314), 9)
+        self.assertEqual(sum_of_digits(-10), 1)
         self.assertEqual(sum_of_digits(0), 0)
+        self.assertEqual(sum_of_digits(6), 6)
+        self.assertEqual(sum_of_digits(11), 2)
+        self.assertEqual(sum_of_digits(123), 6)
+        self.assertEqual(sum_of_digits(1314), 9)
+        self.assertEqual(sum_of_digits(1325132435356), 43)
 
     def test_fact_digits(self):
         self.assertEqual(fact_digits(1), 1)
         self.assertEqual(fact_digits(111), 3)
         self.assertEqual(fact_digits(145), 145)
         self.assertEqual(fact_digits(31), 7)
+        self.assertEqual(fact_digits(999), 1088640)
 
     def test_palindrome(self):
+        self.assertTrue(palindrome(0))
         self.assertTrue(palindrome(121))
         self.assertFalse(palindrome(223))
-        self.assertEqual(palindrome("kapak"), True)
-        self.assertEqual(palindrome("baba"), False)
+        self.assertTrue(palindrome("kapak"))
+        self.assertFalse(palindrome("baba"))
 
     def test_to_digits(self):
         self.assertEqual(to_digits(123), [1, 2, 3])

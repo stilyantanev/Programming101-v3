@@ -1,22 +1,17 @@
 def fact_digits(n):
     n = abs(n)
-    digits = []
-    remainder = 0
-    sum_of_fact_digits = 0
+    sum_facts = 0
 
-    while n > 0:
-        remainder = n % 10
-        digits += [remainder]
-        n = n // 10
+    digits = [int(digit) for digit in str(n)]
 
     for digit in digits:
         fact = 1
         while digit > 0:
             fact = fact * digit
             digit = digit - 1
-        sum_of_fact_digits += fact
+        sum_facts += fact
 
-    return sum_of_fact_digits
+    return sum_facts
 
 
 def main():
