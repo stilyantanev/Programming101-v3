@@ -18,7 +18,6 @@ from next_hack import next_hack
 
 
 class WarmupsTest(unittest.TestCase):
-
     def test_factorial(self):
         self.assertEqual(factorial(0), 1)
         self.assertEqual(factorial(1), 1)

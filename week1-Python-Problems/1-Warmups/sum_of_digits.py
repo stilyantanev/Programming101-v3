@@ -1,12 +1,7 @@
 def sum_of_digits(n):
-    n = abs(n)
-    sum_nums = 0
+    digits = list(str(abs(n)))
 
-    while n > 0:
-        sum_nums += n % 10
-        n = n // 10
-
-    return sum_nums
+    return sum(int(digit) for digit in digits)
 
 
 def main():

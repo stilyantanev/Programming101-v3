@@ -1,19 +1,13 @@
 def is_increasing(seq):
-    is_monotonously_increasing = True
-    index = 0
-
     if len(seq) == 1:
-        return is_monotonously_increasing
-
-    while index < len(seq) - 1:
-        if seq[index] < seq[index + 1]:
-            is_monotonously_increasing = True
-        elif seq[index] >= seq[index + 1]:
-            is_monotonously_increasing = False
-            return is_monotonously_increasing
-        index += 1
-
-    return is_monotonously_increasing
+        return True
+    elif len(seq) == 2:
+        return seq[0] < seq[1]
+    else:
+        if seq[0] < seq[1]:
+            return is_increasing(list(seq[1:]))
+        else:
+            return False
 
 
 def main():
@@ -21,6 +15,7 @@ def main():
     print(is_increasing([1]))
     print(is_increasing([5, 6, -10]))
     print(is_increasing([1, 1, 1, 1]))
+
 
 if __name__ == '__main__':
     main()
