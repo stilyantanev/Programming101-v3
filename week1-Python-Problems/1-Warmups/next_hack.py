@@ -1,7 +1,7 @@
 def next_hack(n):
-    is_number_hack = False
+    is_hack_number = False
 
-    while not is_number_hack:
+    while not is_hack_number:
         n = n + 1
 
         bin_number = str(bin(n)[2:])
@@ -15,7 +15,7 @@ def next_hack(n):
                 sum_of_digits[digit] += 1
 
         if bin_number == reversed_bin_number and sum_of_digits["1"] % 2 == 1:
-            is_number_hack = True
+            is_hack_number = True
 
     return n
 
