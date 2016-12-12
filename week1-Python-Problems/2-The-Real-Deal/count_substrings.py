@@ -9,5 +9,6 @@ def main():
     print(count_substrings("We have nothing in common!", "really?"))
     print(count_substrings("This is this and that is this", "this"))  # "This" != "this"
 
+
 if __name__ == '__main__':
     main()

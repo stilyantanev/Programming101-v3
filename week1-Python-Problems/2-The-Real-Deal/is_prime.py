@@ -1,7 +1,8 @@
 def is_prime(n):
+    n = abs(n)
     is_prime = True
 
-    if n <= 1:
+    if n == 1:
         is_prime = False
         return is_prime
     else:
@@ -21,6 +22,7 @@ def main():
     print(is_prime(8))
     print(is_prime(11))
     print(is_prime(-10))
+
 
 if __name__ == '__main__':
     main()

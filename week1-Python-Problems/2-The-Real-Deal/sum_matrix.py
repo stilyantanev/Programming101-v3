@@ -1,10 +1,5 @@
 def sum_matrix(m):
-    total_sum = 0
-
-    for element in m:
-        total_sum += sum(element)
-
-    return total_sum
+    return sum([sum(array) for array in m])
 
 
 def main():
@@ -14,6 +9,7 @@ def main():
     print(sum_matrix(m))
     m = [[1, 2], [3, 4], [5, 6], [7, 8], [9, 10]]
     print(sum_matrix(m))
+
 
 if __name__ == '__main__':
     main()

@@ -35,5 +35,6 @@ def main():
     m = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
     pprint(matrix_bombing_plan(m))
 
+
 if __name__ == '__main__':
     main()

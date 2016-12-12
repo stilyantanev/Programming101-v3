@@ -1,19 +1,11 @@
 def contains_digits(number, digits):
-    number_digits = []
-    is_contains = True
-
-    while number > 0:
-        number_digits += [number % 10]
-        number = number // 10
+    numbers = list(int(digit) for digit in str(number))
 
     for digit in digits:
-        if digit in number_digits:
-            is_contains = True
-        else:
-            is_contains = False
-            return is_contains
+        if digit not in numbers:
+            return False
 
-    return is_contains
+    return True
 
 
 def main():
@@ -21,6 +13,7 @@ def main():
     print(contains_digits(666, [6, 4]))
     print(contains_digits(123456789, [1, 2, 3, 0]))
     print(contains_digits(456, []))
+
 
 if __name__ == '__main__':
     main()

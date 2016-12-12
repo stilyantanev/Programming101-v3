@@ -1,21 +1,11 @@
 def is_number_balanced(n):
-    digits = []
-
-    while n > 0:
-        digits = [n % 10] + digits
-        n = n // 10
+    digits = [int(x) for x in str(n)]
 
     if len(digits) == 1:
         return True
     else:
-        sum_left = 0
-        sum_right = 0
-
-        for digit in digits[0:len(digits) // 2]:
-            sum_left += digit
-
-        for digit in digits[(len(digits) + 1) // 2:]:
-            sum_right += digit
+        sum_left = sum([digit for digit in digits[0:len(digits) // 2]])
+        sum_right = sum([digit for digit in digits[(len(digits) + 1) // 2:]])
 
         if sum_left == sum_right:
             return True
@@ -31,6 +21,7 @@ def main():
     print(is_number_balanced(4518))
     print(is_number_balanced(28471))
     print(is_number_balanced(1238033))
+
 
 if __name__ == '__main__':
     main()

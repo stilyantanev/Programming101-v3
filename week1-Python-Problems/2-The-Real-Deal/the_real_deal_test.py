@@ -1,4 +1,5 @@
 import unittest
+
 from sum_of_divisors import sum_of_divisors
 from is_prime import is_prime
 from prime_number_of_divisors import prime_number_of_divisors
@@ -77,6 +78,7 @@ class TheRealDealTest(unittest.TestCase):
             (2, 2): 30,
         }
         self.assertEqual(matrix_bombing_plan(m), result)
+
 
 if __name__ == '__main__':
     unittest.main()
