@@ -7,10 +7,7 @@ def is_number_balanced(n):
         sum_left = sum([digit for digit in digits[0:len(digits) // 2]])
         sum_right = sum([digit for digit in digits[(len(digits) + 1) // 2:]])
 
-        if sum_left == sum_right:
-            return True
-        else:
-            return False
+        return sum_left == sum_right
 
 
 def main():

@@ -1,8 +1,8 @@
 def zero_insert(n):
     digits = [int(digit) for digit in str(n)]
 
-    zero_indexes = []
     i = 0
+    zero_indexes = []
     while i < (len(digits) - 1):
         if digits[i] == digits[i + 1] or (digits[i] + digits[i + 1]) % 10 == 0:
             zero_indexes.append(i + 1)
