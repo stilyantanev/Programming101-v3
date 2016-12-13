@@ -11,5 +11,6 @@ def main():
     print(nan_expand(2))
     print(nan_expand(3))
 
+
 if __name__ == '__main__':
     main()

@@ -17,6 +17,7 @@ from friday_years import friday_years
 
 
 class TheFinalRoundTest(unittest.TestCase):
+
     def test_count_words(self):
         result = {
             "bear": 1,
@@ -98,6 +99,7 @@ class TheFinalRoundTest(unittest.TestCase):
         self.assertEqual(friday_years(1100, 2100), 177)
         self.assertEqual(friday_years(1801, 2000), 36)
         self.assertEqual(friday_years(2004, 2005), 1)
+
 
 if __name__ == '__main__':
     unittest.main()

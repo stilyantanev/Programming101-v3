@@ -4,9 +4,7 @@ def prepare_meal(number):
     if spam_times(number) > 0 and eggs(number) != "":
         entire_string += " and "
 
-    entire_string = "\"" + entire_string + eggs(number) + "\""
-
-    return entire_string
+    return "\"" + entire_string + eggs(number) + "\""
 
 
 def spam_times(number):
@@ -16,7 +14,6 @@ def spam_times(number):
     while 3 ** n <= number:
         if number % (3 ** n) == 0:
             times = n
-
         n += 1
 
     return times
@@ -36,6 +33,7 @@ def main():
     print(prepare_meal(15))
     print(prepare_meal(45))
     print(prepare_meal(7))
+
 
 if __name__ == '__main__':
     main()

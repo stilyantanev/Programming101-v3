@@ -15,11 +15,21 @@ def primes_to_number(number):
 
 
 def is_prime(number):
-    for x in range(2, number):
-        if number % x == 0:
-            return False
+    number = abs(number)
+    is_prime = True
 
-    return True
+    if number == 1:
+        is_prime = False
+        return is_prime
+    else:
+        for x in range(2, number):
+            if number % x == 0:
+                is_prime = False
+                return is_prime
+            else:
+                is_prime = True
+
+        return is_prime
 
 
 def main():
@@ -28,6 +38,7 @@ def main():
     print(goldbach(8))
     print(goldbach(10))
     print(goldbach(100))
+
 
 if __name__ == '__main__':
     main()

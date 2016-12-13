@@ -1,21 +1,13 @@
 def prime_factorization(n):
+    primes = [number for number in range(2, n + 1) if is_prime(number)]
+
     factorized = []
-    primes = []
-    index = 2
-    counter = 0
-
-    while index <= n:
-        if is_prime(index):
-            primes.append(index)
-
-        index += 1
-
     for prime in primes:
         if n % prime == 0:
+            counter = 0
             while n % prime == 0:
                 counter += 1
                 n = n // prime
-
             factorized.append((prime, counter))
             counter = 0
 
@@ -23,16 +15,21 @@ def prime_factorization(n):
 
 
 def is_prime(n):
-    index = 2
+    n = abs(n)
     is_prime = True
 
-    while index < n:
-        if n % index == 0:
-            return False
+    if n == 1:
+        is_prime = False
+        return is_prime
+    else:
+        for x in range(2, n):
+            if n % x == 0:
+                is_prime = False
+                return is_prime
+            else:
+                is_prime = True
 
-        index += 1
-
-    return is_prime
+        return is_prime
 
 
 def main():
@@ -41,6 +38,7 @@ def main():
     print(prime_factorization(356))
     print(prime_factorization(89))
     print(prime_factorization(1000))
+
 
 if __name__ == '__main__':
     main()
