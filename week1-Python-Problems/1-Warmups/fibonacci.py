@@ -8,7 +8,6 @@ def fibonacci(n):
         while n - 2 > 0:
             nums.append(nums[-1] + nums[-2])
             n -= 1
-
         return nums
 
 

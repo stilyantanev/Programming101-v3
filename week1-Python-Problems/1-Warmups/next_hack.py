@@ -3,7 +3,6 @@ def next_hack(n):
 
     while not is_hack_number:
         n = n + 1
-
         bin_number = str(bin(n)[2:])
         reversed_bin_number = str(bin(n)[2:])[::-1]
 

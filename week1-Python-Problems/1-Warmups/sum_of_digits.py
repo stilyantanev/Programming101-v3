@@ -1,7 +1,5 @@
 def sum_of_digits(n):
-    digits = list(str(abs(n)))
-
-    return sum(int(digit) for digit in digits)
+    return sum(int(digit) for digit in list(str(abs(n))))
 
 
 def main():
