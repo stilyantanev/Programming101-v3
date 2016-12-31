@@ -1,22 +1,14 @@
 import sys
 
 
-def cat():
-    text = ""
-
+def main():
     if len(sys.argv) > 1:
         filename = sys.argv[1]
-        text_file = open(filename, "r")
-        text = text_file.read()
-        text_file.close()
+        with open(filename, "r") as file:
+            print(file.read())
     else:
         print("You haven't specified filename!")
 
-    return text
-
-
-def main():
-    print(cat())
 
 if __name__ == '__main__':
     main()

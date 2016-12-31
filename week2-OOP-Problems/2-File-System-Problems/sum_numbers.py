@@ -1,18 +1,12 @@
 import sys
 
 
-def sum_numbers():
-    filename = sys.argv[1]
-    text_file = open(filename, "r")
-    content = text_file.read().split(" ")
-    content = [int(x) for x in content]
-    text_file.close()
-
-    return(sum(content))
-
-
 def main():
-    print(sum_numbers())
+    filename = sys.argv[1]
+    with open(filename, "r") as file:
+        numbers = file.read().strip().split(" ")
+        print(sum([int(number) for number in numbers]))
+
 
 if __name__ == '__main__':
     main()
