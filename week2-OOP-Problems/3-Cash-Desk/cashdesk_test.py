@@ -16,15 +16,15 @@ class BillTest(unittest.TestCase):
         self.assertEqual(self.bill.amount, 10)
 
     def test_str_casting(self):
-        self.assertEqual(str(self.bill), "A {}$ bill".format(self.bill.amount))
+        message = "A {}$ bill".format(self.bill.amount)
+        self.assertEqual(str(self.bill), message)
 
     def test_repr_casting(self):
-        message = "A {}$ bill"
-        message = message.format(self.bill.amount)
+        message = "A {}$ bill".format(self.bill.amount)
         self.assertEqual(repr(self.bill), message)
 
     def test_int_casting(self):
-        self.assertEqual(self.bill.amount, 10)
+        self.assertEqual(int(self.bill), 10)
 
     def test_equal_function(self):
         self.another_bill = Bill(10)
@@ -53,37 +53,36 @@ class BatchBillTest(unittest.TestCase):
         self.assertEqual(self.other_batch[2], Bill(30))
 
     def test_total_function(self):
-        total_cash = 0
-        for bill in self.other_batch:
-            total_cash += int(bill)
+        total_cash = sum([int(bill)for bill in self.other_batch])
         self.assertEqual(self.other_batch.total(), total_cash)
 
 
 class CashDeskTest(unittest.TestCase):
 
     def setUp(self):
-        self.new_desk = CashDesk()
+        self.desk = CashDesk()
 
     def test_create_new_cashdesk_instance(self):
-        self.assertTrue(isinstance(self.new_desk, CashDesk))
+        self.assertTrue(isinstance(self.desk, CashDesk))
 
     def test_valid_member(self):
-        self.assertEqual(self.new_desk.all_bills, [])
+        self.assertEqual(self.desk.money_holder, {})
 
     def test_total_function(self):
-        self.new_desk.take_money(Bill(10))
-        self.new_desk.take_money(BatchBill([Bill(10), Bill(100), Bill(2000)]))
-        self.assertEqual(self.new_desk.total(), 2120)
+        self.desk.take_money(Bill(10))
+        self.desk.take_money(BatchBill([Bill(10), Bill(100), Bill(2000)]))
+        self.assertEqual(self.desk.total(), 2120)
 
     def test_inspect_function(self):
-        self.new_desk.take_money(Bill(10))
-        self.new_desk.take_money(BatchBill([Bill(10), Bill(100), Bill(2000)]))
+        self.desk.take_money(Bill(10))
+        self.desk.take_money(BatchBill([Bill(10), Bill(100), Bill(2000)]))
         result = {
             Bill(10): 2,
             Bill(100): 1,
             Bill(2000): 1,
         }
-        self.assertEqual(self.new_desk.inspect(), result)
+        self.assertEqual(self.desk.inspect(), result)
+
 
 if __name__ == '__main__':
     unittest.main()

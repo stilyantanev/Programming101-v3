@@ -31,48 +31,40 @@ class BatchBill:
         return self.bills[index]
 
     def total(self):
-        total_sum = 0
-
-        for bill in self.bills:
-            total_sum += int(bill)
-
-        return total_sum
+        return sum([int(bill) for bill in self.bills])
 
 
 class CashDesk:
 
     def __init__(self):
-        self.all_bills = []
+        self.money_holder = {}
+
+    def __store_bill(self, bill):
+        if bill not in self.money_holder:
+            self.money_holder[bill] = 1
+        else:
+            self.money_holder[bill] += 1
 
     def take_money(self, money):
-        self.all_bills.append(money)
+        if isinstance(money, Bill):
+            self.__store_bill(money)
+        elif isinstance(money, BatchBill):
+            for bill in money:
+                self.__store_bill(bill)
 
     def total(self):
-        result = 0
-
-        for bill in self.all_bills:
-            if isinstance(bill, Bill):
-                result += int(bill)
-            elif isinstance(bill, BatchBill):
-                for single_bill in bill:
-                    result += int(single_bill)
-
-        return result
+        money_holder = self.money_holder
+        return sum([int(bill) * money_holder[bill] for bill in money_holder])
 
     def inspect(self):
-        inspection = {}
+        total = self.total()
+        print("\nWe have a total {}$ in the desk".format(total))
 
-        for bill in self.all_bills:
-            if isinstance(bill, Bill):
-                if bill in inspection:
-                    inspection[bill] += 1
-                elif bill not in inspection:
-                    inspection[bill] = 1
-            elif isinstance(bill, BatchBill):
-                for single_bill in bill:
-                    if single_bill in inspection:
-                        inspection[single_bill] += 1
-                    elif single_bill not in inspection:
-                        inspection[single_bill] = 1
+        info = ("We have the following count of bills, "
+                "sorted in ascending order:")
+        print(info)
 
-        return inspection
+        for bill in self.money_holder:
+            print("{0} - {1}".format(bill, self.money_holder[bill]))
+
+        return self.money_holder
