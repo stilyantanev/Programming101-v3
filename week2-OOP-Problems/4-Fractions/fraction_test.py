@@ -115,5 +115,6 @@ class FractionTest(unittest.TestCase):
         self.assertEqual(new_fraction.numerator, 5)
         self.assertEqual(new_fraction.denominator, 3)
 
+
 if __name__ == '__main__':
     unittest.main()

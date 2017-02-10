@@ -64,5 +64,6 @@ def main():
     print(a - b)  # 0
     print(a * b)  # 1 / 4
 
+
 if __name__ == '__main__':
     main()
